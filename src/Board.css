@@ -18,6 +18,14 @@
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.meet-the-board h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+}
 .character-card-back .contact {
   font-style: italic;
   color: var(--secondary-color);
