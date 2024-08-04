@@ -18,7 +18,7 @@ import reportWebVitals from './reportWebVitals';
 
 function MainApp() {
   return (
-    <Router basename="/wistemweb">
+    <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/app" element={<App />} />
