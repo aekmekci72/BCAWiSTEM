@@ -4,12 +4,12 @@ import Navbar from './Navbar';
 import './Archive.css';
 
 const archiveItems = [
-  { id: 1, image: '/wistemweb/library.png', title: 'Teaching in Libraries', description: 'Introduced elementary and middle school students to subjects ranging from isolating DNA to programming Python terminal games in hopes of sparking passion for STEM amongst the younger generation.' },
-  { id: 2, image: '/wistemweb/presentations.png', title: 'Presentations', description: 'Created slide show presentations throughout the year about areas of interest to educate others.' },
-  { id: 3, image: '/wistemweb/garticphone.png', title: 'Fun + Games!', description: 'Played a Kahoot about successful women in STEM to inspire club members and learn more about contributions from females and gender minorities to various fields along with an interesting Gartic Phone game.' },
-  { id: 4, image: '/wistemweb/bakesale.png', title: 'Bakesale', description: 'Sold baked goods to raise funds for future club activities and advertise WiSTEM with treats!' },
-  { id: 5, image: '/wistemweb/karaoke.png', title: 'Karaoke Event', description: 'Singing to popular songs as a fun bonding experience for the club in early November.' },
-  { id: 6, image: '/wistemweb/roses.png', title: 'Valentine\'s Day Roses', description: 'Sold crocheted roses for Valentine\'s Day at BCA with the hard work of our club members.' },
+  { id: 1, image: '/library.png', title: 'Teaching in Libraries', description: 'Introduced elementary and middle school students to subjects ranging from isolating DNA to programming Python terminal games in hopes of sparking passion for STEM amongst the younger generation.' },
+  { id: 2, image: '/presentations.png', title: 'Presentations', description: 'Created slide show presentations throughout the year about areas of interest to educate others.' },
+  { id: 3, image: '/garticphone.png', title: 'Fun + Games!', description: 'Played a Kahoot about successful women in STEM to inspire club members and learn more about contributions from females and gender minorities to various fields along with an interesting Gartic Phone game.' },
+  { id: 4, image: '/bakesale.png', title: 'Bakesale', description: 'Sold baked goods to raise funds for future club activities and advertise WiSTEM with treats!' },
+  { id: 5, image: '/karaoke.png', title: 'Karaoke Event', description: 'Singing to popular songs as a fun bonding experience for the club in early November.' },
+  { id: 6, image: '/roses.png', title: 'Valentine\'s Day Roses', description: 'Sold crocheted roses for Valentine\'s Day at BCA with the hard work of our club members.' },
   // Add more items as needed
 ];
 
