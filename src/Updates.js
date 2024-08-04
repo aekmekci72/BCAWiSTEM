@@ -50,7 +50,7 @@ const Updates = () => {
               <div key={update.id} className={`update-card pop-in`} style={{animationDelay: `${index * 0.1}s`}}>
                 <div className="update-header">
                   <h3>{update.author}</h3>
-                  <span className="update-time">{new Date(update.timestamp).toLocaleString()}</span>
+                  <span className="update-time">{new Date(update.timestamp).toLocaleDateString()}</span>
                 </div>
                 <p className="update-content">{update.content}</p>
                 {update.images && update.images.length > 0 && (
