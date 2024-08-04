@@ -9,7 +9,7 @@ const Resources = () => {
   const [expandedImage, setExpandedImage] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/resources')
+    fetch('https://wistemweb.onrender.com/resources')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
