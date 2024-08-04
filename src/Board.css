@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #FF69B4;
+  --secondary-color: #4169E1;
+  --background-color: #F0F8FF;
+  --text-color: #333;
+}
+
+.meet-the-board {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.character-card-back .contact {
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+.meet-the-board.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.character-card {
+  perspective: 1000px;
+}
+
+.character-card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.character-card.flipped .character-card-inner {
+  transform: rotateY(180deg);
+}
+
+.character-card-front,
+.character-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.character-card-front {
+  background-color: white;
+}
+
+.character-card-front img {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.character-card-back {
+  background-color: var(--background-color);
+  transform: rotateY(180deg);
+}
+
+.character-card-back h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.character-card-back .role {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+.character-card-back .bio {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.character-card-back .fun-facts {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.character-card-back .fun-facts h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.character-card-back .fun-fact-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
