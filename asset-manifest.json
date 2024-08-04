@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wistemweb/static/css/main.2de5f5bd.css",
-    "main.js": "/wistemweb/static/js/main.0bb8c31e.js",
+    "main.js": "/wistemweb/static/js/main.87f0a139.js",
     "static/js/453.d8b07f4c.chunk.js": "/wistemweb/static/js/453.d8b07f4c.chunk.js",
     "index.html": "/wistemweb/index.html",
     "main.2de5f5bd.css.map": "/wistemweb/static/css/main.2de5f5bd.css.map",
-    "main.0bb8c31e.js.map": "/wistemweb/static/js/main.0bb8c31e.js.map",
+    "main.87f0a139.js.map": "/wistemweb/static/js/main.87f0a139.js.map",
     "453.d8b07f4c.chunk.js.map": "/wistemweb/static/js/453.d8b07f4c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2de5f5bd.css",
-    "static/js/main.0bb8c31e.js"
+    "static/js/main.87f0a139.js"
   ]
 }
