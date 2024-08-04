@@ -9,9 +9,7 @@ import HomePage from './HomePage';
 import Board from './Board';
 import Resources from './Resources';
 import Updates from './Updates';
-import Login from './Login';
 import Archive from './Archive';
-import Signup from './Signup';
 
 
 import reportWebVitals from './reportWebVitals';
@@ -25,8 +23,6 @@ function MainApp() {
           <Route path="/board" element={<Board />} />
           <Route path="/updates" element={<Updates />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/archive" element={<Archive />} />
     
         </Routes>
