@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from './AuthContext'; // Import the useAuth hook
+import { useAuth } from './AuthContext'; 
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { currentUser } = useAuth(); // Get the current user from the auth context
+  const { currentUser } = useAuth(); 
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);

@@ -15,7 +15,7 @@ const ManageUpdates = () => {
   useEffect(() => {
     const fetchUserRole = async (email) => {
       try {
-        const response = await fetch(`http://localhost:5000/get_role`, {
+        const response = await fetch(`https://wistemweb.onrender.com/get_role`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const ManageUpdates = () => {
       images: newUpdateImages,
     };
 
-    fetch('http://localhost:5000/addupdate', {
+    fetch('https://wistemweb.onrender.com/addupdate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const ManageUpdates = () => {
   };
 
   const handleDeleteUpdate = (id) => {
-    fetch('http://localhost:5000/delete_update', {
+    fetch('https://wistemweb.onrender.com/delete_update', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ const ManageUpdates = () => {
     });
 
     try {
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://wistemweb.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });

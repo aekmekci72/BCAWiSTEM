@@ -34,7 +34,7 @@ const ManageResources = () => {
 
   const handleAddResource = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/addresource', {
+    fetch('https://wistemweb.onrender.com/addresource', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const ManageResources = () => {
   };
 
   const handleDeleteResource = (id) => {
-    fetch('http://localhost:5000/delete_resource', {
+    fetch('https://wistemweb.onrender.com/delete_resource', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

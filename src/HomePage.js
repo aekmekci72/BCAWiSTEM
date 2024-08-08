@@ -55,7 +55,7 @@ const BCAWiSTEMHomepage = () => {
       });
     };
   
-    handleScroll(); // Call once to set initial state
+    handleScroll(); 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrollPosition]);
