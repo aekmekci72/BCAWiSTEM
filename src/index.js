@@ -10,21 +10,32 @@ import Board from './Board';
 import Resources from './Resources';
 import Updates from './Updates';
 import Archive from './Archive';
+import EditUpdates from './EditUpdates';
+import EditResources from './EditResources';
+import Login from './Login';
+
+import { AuthProvider } from './AuthContext';
+import ProtectedRoute from './ProtectedRoute';
 
 import reportWebVitals from './reportWebVitals';
 
 function MainApp() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/app" element={<App />} />
-        <Route path="/board" element={<Board />} />
-        <Route path="/updates" element={<Updates />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/archive" element={<Archive />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/app" element={<App />} />
+          <Route path="/board" element={<Board />} />
+          <Route path="/updates" element={<Updates />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/archive" element={<Archive />} />
+          <Route path="/editupdates" element={<ProtectedRoute element={EditUpdates} />} />
+          <Route path="/editresources" element={<ProtectedRoute element={EditResources} />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
