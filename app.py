@@ -70,7 +70,6 @@ def get_updates():
 def get_events():
     try:
         resources_ref = db.collection('resources').order_by('timestamp', direction=firestore.Query.DESCENDING).stream()
-        resources_ref = resources_ref.stream()
 
         resources = []
         for doc in resources_ref:
