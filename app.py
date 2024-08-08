@@ -28,7 +28,7 @@ firebase_admin.initialize_app(cred, {
 })
 db = firestore.client()
 
-bucket = storage.bucket()
+bucket = storage.bucket(os.environ.get("FIREBASE_STORAGE_BUCKET"))
 
 UPLOAD_FOLDER = './public'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -81,6 +81,23 @@ def get_events():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# @app.route('/upload', methods=['POST'])
+# def upload_images():
+#     try:
+#         if 'images' not in request.files:
+#             return jsonify({"error": "No images part in the request"}), 400
+
+#         files = request.files.getlist('images')
+#         image_paths = []
+
+#         for file in files:
+#             file_path = os.path.join(UPLOAD_FOLDER, file.filename)
+#             file.save(file_path)
+#             image_paths.append(f'/{file.filename}')
+
+#         return jsonify({"imagePaths": image_paths}), 200
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 @app.route('/upload', methods=['POST'])
 def upload_images():
     try:
@@ -88,17 +105,19 @@ def upload_images():
             return jsonify({"error": "No images part in the request"}), 400
 
         files = request.files.getlist('images')
-        image_paths = []
+        image_urls = []
 
         for file in files:
-            file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-            file.save(file_path)
-            image_paths.append(f'/{file.filename}')
+            # Generate a unique filename
+            unique_filename = f"{os.urandom(16).hex()}_{file.filename}"
+            blob = bucket.blob(unique_filename)
+            blob.upload_from_file(file)
+            blob.make_public()  # Make the file publicly accessible
+            image_urls.append(blob.public_url)  # Get the public URL
 
-        return jsonify({"imagePaths": image_paths}), 200
+        return jsonify({"imagePaths": image_urls}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
