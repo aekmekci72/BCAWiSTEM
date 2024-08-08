@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
-import { auth } from './firebase'; // Import the auth object from your firebase.js
+import { auth } from './firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
-import './Login.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
+import './Login.css'; 
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in 
         console.log('User signed in:', userCredential.user);
-        navigate('/'); // Navigate to the homepage
+        navigate('/'); 
       })
       .catch((error) => {
         setError(error.message);

@@ -2,11 +2,11 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  margin-top: 5rem; /* Start updates lower to avoid navbar overlap */
+  margin-top: 5rem;
 }
 
 .updates-box {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -21,7 +21,7 @@
 }
 
 .update-image {
-  max-width: 100px; /* Tiny preview size */
+  max-width: 100px;
   max-height: 100px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -49,10 +49,10 @@
 }
 
 .expanded-image {
-  max-width: 50vw; /* Maximum width is 50% of viewport width */
-  max-height: 50vh; /* Maximum height is 50% of viewport height */
-  width: auto; /* Maintain aspect ratio */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 50vw; 
+  max-height: 50vh; 
+  width: auto; 
+  height: auto;
   transition: transform 0.3s ease-in-out;
 }
 .expanded-image-overlay:after {
@@ -165,10 +165,10 @@
   }
 }
 
-/* Add this to your existing CSS */
+
 
 .resource-link {
-  color: #4169E1; /* A nice blue color */
+  color: #4169E1; 
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;

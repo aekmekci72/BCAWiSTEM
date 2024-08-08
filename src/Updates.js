@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
-import './Updates.css'; // Make sure to import the CSS file
+import './Updates.css'; 
 
 const Updates = () => {
   const [updates, setUpdates] = useState([]);
