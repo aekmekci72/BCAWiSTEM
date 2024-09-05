@@ -13,6 +13,7 @@ import Archive from './Archive';
 import EditUpdates from './EditUpdates';
 import EditResources from './EditResources';
 import Login from './Login';
+import Signup from './Signup';
 
 import { AuthProvider } from './AuthContext';
 import ProtectedRoute from './ProtectedRoute';
@@ -33,6 +34,7 @@ function MainApp() {
           <Route path="/editupdates" element={<ProtectedRoute element={EditUpdates} />} />
           <Route path="/editresources" element={<ProtectedRoute element={EditResources} />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </AuthProvider>

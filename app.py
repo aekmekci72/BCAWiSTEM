@@ -4,6 +4,7 @@ import firebase_admin
 from firebase_admin import credentials, firestore, storage
 import tempfile
 import os
+import datetime
 from dotenv import load_dotenv
 load_dotenv() 
 
@@ -65,6 +66,17 @@ def get_updates():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/ping')
+def ping():
+    try:
+        current_time = datetime.now().isoformat()
+        return jsonify({
+            "status": "OK",
+            "message": "Ping received",
+            "timestamp": current_time
+        }), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/resources')
 def get_events():
