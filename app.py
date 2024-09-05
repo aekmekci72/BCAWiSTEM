@@ -69,11 +69,9 @@ def get_updates():
 @app.route('/ping')
 def ping():
     try:
-        current_time = datetime.now().isoformat()
         return jsonify({
             "status": "OK",
             "message": "Ping received",
-            "timestamp": current_time
         }), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
