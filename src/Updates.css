@@ -176,6 +176,9 @@
     color: var(--primary-color);
     margin: 0;
     font-size: 1.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   .update-time {
@@ -187,8 +190,11 @@
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
-  
+
   .loading, .error {
     text-align: center;
     padding: 2rem;
