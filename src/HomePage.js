@@ -67,7 +67,7 @@ const BCAWiSTEMHomepage = () => {
       <section id="home" className="section">
         <h1>BCA WiSTEM</h1>
         <h2>Empowering Women in Science, Technology, Engineering, and Mathematics</h2>
-        <button className="cta-button">Interest Form!</button>
+        {/* <button className="cta-button">Interest Form!</button> */}
       </section>
 
       <section id="about" className="section">
