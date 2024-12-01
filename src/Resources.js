@@ -51,7 +51,7 @@ const Resources = () => {
                 <div className="update-header">
                   <h3>{resource.author}</h3>
                   <a href={resource.link} target="_blank" rel="noopener noreferrer" className="resource-link">
-                    {resource.link}
+                    link
                   </a>
                 </div>
                 <p className="update-content">{resource.message}</p>
